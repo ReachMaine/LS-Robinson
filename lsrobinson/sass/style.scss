@@ -7,3 +7,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template:     wprentals
 Text Domain:  wpestate-child
 -------------------------------------------------------------- */
+@import "partials/colors";
+@import "partials/wprentals"; // import as per theme options.
+
+
+/* *** keep this at the end *** */
+@import "partials/media";
