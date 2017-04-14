@@ -17,3 +17,20 @@ add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css' );
 
 // END ENQUEUE PARENT ACTION
 require_once(get_stylesheet_directory().'/custom/branding.php');
+
+  /* add custom widgets  */
+  add_action( 'widgets_init', 'reach_widgets_init' );
+  function reach_widgets_init() {
+      if ( function_exists('register_sidebar') ) {
+        // widget under media header.
+         register_sidebar(array(
+          'name' => 'Under Header widget',
+          'id' => 'headerbottom',
+          'description' => 'Widget under the header',
+          'before_widget' => '<div id="reach-under-header"><div id="%1$s" class="widget %2$s">',
+          'after_widget'  => '</div></div>',
+          'before_title'  => '<h3 class="widget-title">',
+          'after_title'   => '</h3><div class="tx-div small"></div>',
+        ));
+      } //function_exists('register_sidebar')
+    } // function reach_widgets_init
