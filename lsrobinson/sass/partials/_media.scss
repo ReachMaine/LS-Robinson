@@ -1,0 +1,139 @@
+/* **** media **** */
+
+@media only screen and (max-width: 480px) {
+	.rev_slider, .header-hero-section {
+		height: 200px !important;
+	}
+	.logo img {
+		height: 70px;
+	}
+	.style4 .logo {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-left: 10px;
+	}
+	body.header-transparent #header #header-inner-wrap {
+		height: 110px;
+	}
+
+	#header-controls-right, body.header-transparent #header-inner-wrap .mobile-nav-controller-wrap {
+		line-height: 120px !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.reach-phone-cols { // dont make social icons rows 100% at here
+		.textwidget {
+			.one-third {
+			//	width: 30%;
+			//	float: left;
+			}
+		}
+	}
+	#sb-slidebar-content {
+		#slidebar-menu {
+			.mobile-sub-menu-controller {
+			//	font-size: 22px;
+			}
+		}
+
+	}
+	#main-wrapper {
+		#header {
+			.logo {
+			//	padding-top: 5px;
+			}
+			#header-controls-right {
+			//	line-height: 120px;
+			}
+		}
+		#main {
+		//	background-color: $wakeland-ltblue;
+		}
+		#hero-section {
+		//	top: 120px;
+		}
+		#content {
+		//	padding-top: 120px;
+			.be-text-inner {
+		//		width: 92%!important;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+	.rev_slider, .header-hero-section {
+		height: 400px !important;
+	}
+}
+
+@media only screen and (max-width: 959px) {
+	img.menu-icon {
+		left: 7px;
+		top: 6px;
+		width: 30px;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+
+	nav ul {
+		position: absolute;
+		top: 25px;
+	}
+
+	img.menu-icon {
+		top: -45px;
+		right: 17px;
+		width: 40px;
+	}
+
+	.abc-menu-company {
+		img {
+			right: 32px;
+		}
+	}
+
+	.abc-menu-news {
+		img {
+			right: 22px;
+		}
+	}
+
+	.abc-menu-events {
+		img {
+			right: 25px;
+		}
+	}
+
+	.abc-menu-brewery {
+		img {
+			right: 31px;
+		}
+	}
+
+	.abc-menu-pub {
+		img {
+			right: 14px;
+		}
+	}
+
+	.abc-menu-menu {
+		img {
+			right: 21px;
+		}
+	}
+
+	.abc-menu-mug-club {
+		img {
+			right: 31px;
+		}
+	}
+
+	.abc-menu-contact {
+		img {
+			right: 3px;
+		}
+	}
+}
