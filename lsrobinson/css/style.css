@@ -360,6 +360,13 @@ blockquote {
 #access ul.menu > li > a {
   font-size: 13px; }
 
+/**** header *****/
+#reach-under-header {
+  height: 0px; }
+  #reach-under-header .lsr-under-over {
+    position: relative;
+    top: -350px; }
+
 /* *** keep this at the end *** */
 /* **** media **** */
 @media only screen and (max-width: 480px) {

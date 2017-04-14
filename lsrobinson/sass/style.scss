@@ -10,6 +10,14 @@ Text Domain:  wpestate-child
 @import "partials/colors";
 @import "partials/wprentals"; // import as per theme options.
 
+/**** header *****/
+#reach-under-header {
+  height: 0px;
+  .lsr-under-over {
+    position: relative;
+    top: -350px;
+  }
+}
 
 /* *** keep this at the end *** */
 @import "partials/media";
