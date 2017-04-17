@@ -360,6 +360,19 @@ blockquote {
 #access ul.menu > li > a {
   font-size: 13px; }
 
+/* settings styles */
+.btn-shape-square {
+  border-radius: 0px; }
+
+.btn-size-lg {
+  font-size: 18px;
+  padding: 18px 25px; }
+
+.btn-asis {
+  text-transform: none;
+  box-shadow: none;
+  -webkit-box-shape: none; }
+
 /**** header *****/
 #reach-under-header {
   height: 0px; }
