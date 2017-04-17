@@ -78,9 +78,9 @@
 
 @media only screen and (min-width: 960px) {
 
-	nav ul {
+	.transparent_header nav ul { //move logo up to be vertically aligned with logo
 		position: absolute;
-		top: 25px;
+		top: -40px;
 	}
 
 	img.menu-icon {

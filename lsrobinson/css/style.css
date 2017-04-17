@@ -367,6 +367,24 @@ blockquote {
     position: relative;
     top: -350px; }
 
+.logo img {
+  max-height: 100px; }
+
+.transparent_header.header_wide_yes .header_wrapper_inside {
+  top: 65px; }
+
+#access ul {
+  margin: 0 0 0 6.1875em; }
+
+.hover_type_5 #access .menu > li:hover > a {
+  border-bottom: 3px solid #3b53a4; }
+
+.navbar-fixed-top .logo img {
+  max-height: 55px; }
+
+.home .content_wrapper.row {
+  display: none; }
+
 /* *** keep this at the end *** */
 /* **** media **** */
 @media only screen and (max-width: 480px) {
@@ -395,9 +413,9 @@ blockquote {
     top: 6px;
     width: 30px; } }
 @media only screen and (min-width: 960px) {
-  nav ul {
+  .transparent_header nav ul {
     position: absolute;
-    top: 25px; }
+    top: -40px; }
 
   img.menu-icon {
     top: -45px;

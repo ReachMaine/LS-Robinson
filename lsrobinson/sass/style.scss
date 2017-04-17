@@ -19,5 +19,28 @@ Text Domain:  wpestate-child
   }
 }
 
+.logo img {
+  max-height: 100px //increase logo size
+}
+
+.transparent_header.header_wide_yes .header_wrapper_inside {
+  top: 65px;
+}
+
+#access ul {
+  margin: 0 0 0 6.1875em; //move main menu to the right
+}
+
+.hover_type_5  #access .menu > li:hover>a { //change color under menu item on hover
+  border-bottom: 3px solid #3b53a4;
+}
+
+.navbar-fixed-top .logo img {
+  max-height: 55px;
+}
+
+.home .content_wrapper.row {
+  display: none;
+}
 /* *** keep this at the end *** */
 @import "partials/media";
