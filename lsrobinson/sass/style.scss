@@ -15,8 +15,11 @@ Text Domain:  wpestate-child
 #reach-under-header {
   height: 0px;
   .lsr-under-over {
-    position: relative;
-    top: -350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -42,6 +45,15 @@ Text Domain:  wpestate-child
 
 .home .content_wrapper.row {
   display: none;
+}
+
+.home-buttons {
+  background-color: rgba(255, 255, 255, .5);
+  margin: auto;
+  height: 110px;
+  width: 530px;
+  padding-top: 18px;
+
 }
 /* *** keep this at the end *** */
 @import "partials/media";
