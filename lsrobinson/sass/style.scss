@@ -66,5 +66,40 @@ Text Domain:  wpestate-child
 .single-content p a {
   color: #868686;
 }
+
+.homes-template-default .meta-element-head, .prop_social_single, .vc_gitem_post_date {
+  display: none;
+}
+
+.vc_btn3-style-flat {
+  background-color: $ls-robinson-blue !important;
+}
+
+//mobile menu
+.mobile-logo img {
+  margin-top: 5px;
+}
+
+.mobile_header, .snap-drawer, .user_mobile_menu_list, .mobilex-menu { //Setting background color for mobile menu and flyout
+  background-color: #e6e6e6;
+}
+
+.user_mobile_menu_list li a, .mobilex-menu li a {
+  color: #3a53a4;
+}
+
+.user_mobile_menu_list li:hover a, .mobilex-menu li:hover a {
+  color: white;
+}
+
+//Misc
+.backtop {
+  background-color: $ls-robinson-blue;
+  opacity: 1;
+  i {
+    color: white;
+  }
+}
+
 /* *** keep this at the end *** */
 @import "partials/media";
