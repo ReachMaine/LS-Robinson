@@ -392,7 +392,10 @@ blockquote {
 #access ul {
   margin: 0 0 0 6.1875em; }
 
-.hover_type_5 #access .menu > li:hover > a {
+#access .menu li:hover > a, #access #access .menu li:hover > a:active, #access .menu li:hover > a:focus, #access .current-menu-item > a, #access .current-menu-parent > a, #access .current-menu-ancestor > a {
+  color: #3b53a4; }
+
+.hover_type_5 #access .menu > li:hover > a, .hover_type_5 #access .menu li.current-menu-item a {
   border-bottom: 3px solid #3b53a4; }
 
 .navbar-fixed-top .logo img {
@@ -407,6 +410,9 @@ blockquote {
   height: 110px;
   width: 530px;
   padding-top: 18px; }
+
+.single-content p a {
+  color: #868686; }
 
 /* *** keep this at the end *** */
 /* **** media **** */

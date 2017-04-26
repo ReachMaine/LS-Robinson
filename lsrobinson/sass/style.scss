@@ -35,8 +35,14 @@ Text Domain:  wpestate-child
   margin: 0 0 0 6.1875em; //move main menu to the right
 }
 
-.hover_type_5  #access .menu > li:hover>a { //change color under menu item on hover
-  border-bottom: 3px solid #3b53a4;
+#access{
+  .menu li:hover>a, #access .menu li:hover>a:active, .menu li:hover>a:focus, .current-menu-item >a, .current-menu-parent>a, .current-menu-ancestor>a  {
+  color: $ls-robinson-blue;
+  }
+}
+
+.hover_type_5  #access .menu > li:hover>a, .hover_type_5 #access .menu li.current-menu-item a { //change color under menu item on hover
+  border-bottom: 3px solid $ls-robinson-blue;
 }
 
 .navbar-fixed-top .logo img {
@@ -54,6 +60,11 @@ Text Domain:  wpestate-child
   width: 530px;
   padding-top: 18px;
 
+}
+
+// content_wrapper
+.single-content p a {
+  color: #868686;
 }
 /* *** keep this at the end *** */
 @import "partials/media";
