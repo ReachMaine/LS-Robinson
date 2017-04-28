@@ -31,7 +31,22 @@ Text Domain:  wpestate-child
 .header_media:empty {
     border-bottom: 4px solid $ls-robinson-blue;
 }
+//mobile menu
+.mobile-logo img {
+  margin-top: 5px;
+}
 
+.mobile_header, .snap-drawer, .user_mobile_menu_list, .mobilex-menu { //Setting background color for mobile menu and flyout
+  background-color: #e6e6e6;
+}
+
+.user_mobile_menu_list li a, .mobilex-menu li a {
+  color: #3a53a4;
+}
+
+.user_mobile_menu_list li:hover a, .mobilex-menu li:hover a {
+  color: white;
+}
 // under header widget area
 #reach-under-header {
   height: 0px;
@@ -89,22 +104,15 @@ Text Domain:  wpestate-child
   background-color: $ls-robinson-blue !important;
 }
 
-//mobile menu
-.mobile-logo img {
-  margin-top: 5px;
+// reach cta
+#reach-bottom-cta {
+  padding-bottom: 30px;
+  #reach-bottom-cta-wrap {
+    text-align: center;
+  }
 }
+// footer
 
-.mobile_header, .snap-drawer, .user_mobile_menu_list, .mobilex-menu { //Setting background color for mobile menu and flyout
-  background-color: #e6e6e6;
-}
-
-.user_mobile_menu_list li a, .mobilex-menu li a {
-  color: #3a53a4;
-}
-
-.user_mobile_menu_list li:hover a, .mobilex-menu li:hover a {
-  color: white;
-}
 
 //Misc
 .backtop {

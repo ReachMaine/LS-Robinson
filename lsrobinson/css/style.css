@@ -392,6 +392,18 @@ blockquote {
 .header_media:empty {
   border-bottom: 4px solid #3b53a4; }
 
+.mobile-logo img {
+  margin-top: 5px; }
+
+.mobile_header, .snap-drawer, .user_mobile_menu_list, .mobilex-menu {
+  background-color: #e6e6e6; }
+
+.user_mobile_menu_list li a, .mobilex-menu li a {
+  color: #3a53a4; }
+
+.user_mobile_menu_list li:hover a, .mobilex-menu li:hover a {
+  color: white; }
+
 #reach-under-header {
   height: 0px; }
   #reach-under-header .lsr-under-over {
@@ -432,17 +444,10 @@ blockquote {
 .vc_btn3-style-flat {
   background-color: #3b53a4 !important; }
 
-.mobile-logo img {
-  margin-top: 5px; }
-
-.mobile_header, .snap-drawer, .user_mobile_menu_list, .mobilex-menu {
-  background-color: #e6e6e6; }
-
-.user_mobile_menu_list li a, .mobilex-menu li a {
-  color: #3a53a4; }
-
-.user_mobile_menu_list li:hover a, .mobilex-menu li:hover a {
-  color: white; }
+#reach-bottom-cta {
+  padding-bottom: 30px; }
+  #reach-bottom-cta #reach-bottom-cta-wrap {
+    text-align: center; }
 
 .backtop {
   background-color: #3b53a4;

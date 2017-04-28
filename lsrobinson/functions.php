@@ -32,5 +32,17 @@ require_once(get_stylesheet_directory().'/custom/branding.php');
           'before_title'  => '<h3 class="widget-title">',
           'after_title'   => '</h3><div class="tx-div small"></div>',
         ));
+
+        register_sidebar(
+                array(
+                 'name' => __( 'Bottom Call to Action ', 'reach' ),
+                 'id'   => 'reach-bottom-cta',
+                 'description'   => __( 'Widget area (above footer)', 'reach' ),
+                 'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                 'after_widget'  => '</div>',
+                 'before_title'  => '<h6>',
+                 'after_title'   => '</h6>',
+              )
+          );
       } //function_exists('register_sidebar')
     } // function reach_widgets_init
