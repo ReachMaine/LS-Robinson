@@ -89,51 +89,14 @@
 		width: 40px;
 	}
 
-	.abc-menu-company {
-		img {
-			right: 32px;
-		}
-	}
 
-	.abc-menu-news {
-		img {
-			right: 22px;
-		}
-	}
+}
+@media only screen and (max-width: 1180px) { // flips over mobile menu here.
 
-	.abc-menu-events {
-		img {
-			right: 25px;
-		}
-	}
+}
 
-	.abc-menu-brewery {
-		img {
-			right: 31px;
-		}
-	}
-
-	.abc-menu-pub {
-		img {
-			right: 14px;
-		}
-	}
-
-	.abc-menu-menu {
-		img {
-			right: 21px;
-		}
-	}
-
-	.abc-menu-mug-club {
-		img {
-			right: 31px;
-		}
-	}
-
-	.abc-menu-contact {
-		img {
-			right: 3px;
-		}
+@media only screen and (min-width: 1181px) { // no mobile menu here.
+	.master_header.master_transparent_header+.header_media {  // master_transparent_header followed by header_media
+	    min-height: 150px;
 	}
 }

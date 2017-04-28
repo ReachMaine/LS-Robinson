@@ -374,6 +374,24 @@ blockquote {
   -webkit-box-shape: none; }
 
 /**** header *****/
+.topbar_on {
+  top: 40px; }
+
+.logo img {
+  max-height: 100px; }
+
+.mobile-logo img {
+  max-height: auto; }
+
+.transparent_header.header_wide_yes .header_wrapper_inside {
+  top: 65px; }
+
+.header_media {
+  background-color: #e6e6e6; }
+
+.header_media:empty {
+  border-bottom: 4px solid #3b53a4; }
+
 #reach-under-header {
   height: 0px; }
   #reach-under-header .lsr-under-over {
@@ -382,12 +400,6 @@ blockquote {
     left: 50%;
     margin: auto;
     transform: translate(-50%, 0); }
-
-.logo img {
-  max-height: 100px; }
-
-.transparent_header.header_wide_yes .header_wrapper_inside {
-  top: 65px; }
 
 #access ul {
   margin: 0 0 0 6.1875em; }
@@ -473,28 +485,7 @@ blockquote {
   img.menu-icon {
     top: -45px;
     right: 17px;
-    width: 40px; }
-
-  .abc-menu-company img {
-    right: 32px; }
-
-  .abc-menu-news img {
-    right: 22px; }
-
-  .abc-menu-events img {
-    right: 25px; }
-
-  .abc-menu-brewery img {
-    right: 31px; }
-
-  .abc-menu-pub img {
-    right: 14px; }
-
-  .abc-menu-menu img {
-    right: 21px; }
-
-  .abc-menu-mug-club img {
-    right: 31px; }
-
-  .abc-menu-contact img {
-    right: 3px; } }
+    width: 40px; } }
+@media only screen and (min-width: 1181px) {
+  .master_header.master_transparent_header + .header_media {
+    min-height: 150px; } }

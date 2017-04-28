@@ -1,5 +1,4 @@
-<div class="header_media">
-<?php
+<div class="header_media"><?php
 global $page_tax;
 global $global_header_type;
 global $header_type;
@@ -158,13 +157,10 @@ if($show_adv_search_general ==  'yes' && !is_404() ){
 
     }
 }
-
-?>
-<?php  if ( is_active_sidebar( 'headerbottom') ) { // zig 14Apr17
+  if ( is_active_sidebar( 'headerbottom') ) { // zig 14Apr17
 		dynamic_sidebar( 'headerbottom' );
 	} ?>
 </div>
-
 <?php
 if( $show_mobile == 1 ){
     get_template_part('templates/adv_search_mobile');
