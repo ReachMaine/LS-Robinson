@@ -49,9 +49,9 @@ if ( 'wpestate_message' == get_post_type() || 'wpestate_invoice' == get_post_typ
             ?>
 
             <div class="meta-info">
-                <div class="meta-element">
+                <?php /* <div class="meta-element">
                     <?php print '<strong>'.esc_html__( 'Category','wpestate').': </strong>';the_category(', ')?>
-                </div>
+                </div> */ ?>
 
 
                 <div class="prop_social_single">
@@ -75,7 +75,7 @@ if ( 'wpestate_message' == get_post_type() || 'wpestate_invoice' == get_post_typ
         <!-- end comments -->
 
         <?php endwhile; // end of the loop. ?>
-    </div> <?php /* mc_col */ ?>
+    </div> <!--  -mc_col12 -->
 
 <?php  /* include(locate_template('sidebar.php')); */ ?>
 </div>
