@@ -373,6 +373,9 @@ blockquote {
   box-shadow: none;
   -webkit-box-shape: none; }
 
+.lsr-button-square a.vc_btn3-shape-rounded {
+  border-radius: 0px; }
+
 /* styling for homes */
 .homes-nextprev-wrap .homes-next:not(:empty),
 .homes-nextprev-wrap .homes-prev:not(:empty) {
