@@ -386,6 +386,41 @@ blockquote {
 .homes-nextprev-wrap:after {
   clear: both; }
 
+.widget_woothemes_our_team .team-members.columns-3 .team-member {
+  width: 30%; }
+.widget_woothemes_our_team .team-members .team-member {
+  float: left;
+  padding: 10px;
+  margin-right: 2%;
+  vertical-align: top;
+  text-align: center; }
+  .widget_woothemes_our_team .team-members .team-member h3.member {
+    margin-bottom: 0px;
+    padding-top: 10px; }
+  .widget_woothemes_our_team .team-members .team-member .role {
+    margin-top: 0px; }
+  .widget_woothemes_our_team .team-members .team-member .team-member-text ul.author-details {
+    list-style: none;
+    margin-left: 0px;
+    margin-top: 0px; }
+    .widget_woothemes_our_team .team-members .team-member .team-member-text ul.author-details li {
+      margin-top: 0px;
+      border-bottom: 0px; }
+
+@media only screen and (min-width: 481px) {
+  .widget_woothemes_our_team {
+    max-width: 90%;
+    margin: auto; }
+    .widget_woothemes_our_team .team-member.last {
+      margin-right: 0px; }
+    .widget_woothemes_our_team .team-member.first {
+      clear: both; } }
+@media only screen and (max-width: 480px) {
+  .widget_woothemes_our_team .team-members.columns-3 {
+    .team-member: nth-child(even);
+    clear: both; }
+    .widget_woothemes_our_team .team-members.columns-3 .team-member {
+      width: 48%; } }
 /**** header *****/
 .topbar_on {
   top: 40px; }
