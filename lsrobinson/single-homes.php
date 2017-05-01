@@ -74,6 +74,18 @@ if ( 'wpestate_message' == get_post_type() || 'wpestate_invoice' == get_post_typ
         <?php comments_template('', true);?>
         <!-- end comments -->
 
+        <!-- next/prev start -->
+        <?php
+        echo '<div class="homes-nextprev-wrap">';
+          echo '<div class="homes-prev">';
+        previous_post_link('%link', '&lt;&lt; %title', TRUE /* same category */ );
+          echo '</div>'; // end-next
+          echo '<div class="homes-next">';
+        next_post_link('%link', "%title &gt;&gt;",  TRUE  /*same category */ );
+          echo '</div>'; // end-prev
+        echo '</div>'; // end wrap
+        ?>
+        <!-- end next/prev  -->
         <?php endwhile; // end of the loop. ?>
     </div> <!--  -mc_col12 -->
 

@@ -10,6 +10,7 @@ Text Domain:  wpestate-child
 @import "partials/colors";
 @import "partials/wprentals"; // import as per theme options.
 @import "partials/settings";
+@import "partials/homes";
 
 /**** header *****/
 
@@ -109,6 +110,12 @@ Text Domain:  wpestate-child
   padding-bottom: 30px;
   #reach-bottom-cta-wrap {
     text-align: center;
+    .texwidget {
+      a {
+        color: white;
+        padding: 18px 25px;
+      }
+    }
   }
 }
 // footer

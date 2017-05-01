@@ -1,0 +1,19 @@
+/* styling for homes */
+.homes-nextprev-wrap {
+  // both
+  .homes-next:not(:empty),
+  .homes-prev:not(:empty)  {
+    border: 1px solid $ls-robinson-blue;
+      padding: 10px 15px;
+  }
+
+  .homes-next {
+    float: right;
+  }
+  .homes-prev {
+    float: left;
+  }
+}
+.homes-nextprev-wrap:after {
+  clear: both;
+}

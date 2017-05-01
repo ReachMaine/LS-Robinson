@@ -373,6 +373,19 @@ blockquote {
   box-shadow: none;
   -webkit-box-shape: none; }
 
+/* styling for homes */
+.homes-nextprev-wrap .homes-next:not(:empty),
+.homes-nextprev-wrap .homes-prev:not(:empty) {
+  border: 1px solid #3b53a4;
+  padding: 10px 15px; }
+.homes-nextprev-wrap .homes-next {
+  float: right; }
+.homes-nextprev-wrap .homes-prev {
+  float: left; }
+
+.homes-nextprev-wrap:after {
+  clear: both; }
+
 /**** header *****/
 .topbar_on {
   top: 40px; }
@@ -448,6 +461,9 @@ blockquote {
   padding-bottom: 30px; }
   #reach-bottom-cta #reach-bottom-cta-wrap {
     text-align: center; }
+    #reach-bottom-cta #reach-bottom-cta-wrap .texwidget a {
+      color: white;
+      padding: 18px 25px; }
 
 .backtop {
   background-color: #3b53a4;
