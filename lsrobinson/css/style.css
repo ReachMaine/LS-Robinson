@@ -528,6 +528,19 @@ blockquote {
 
   #header-controls-right, body.header-transparent #header-inner-wrap .mobile-nav-controller-wrap {
     line-height: 120px !important; } }
+@media only screen and (max-width: 767px) {
+  /* Stacking main buttons on homepage */
+  #reach-under-header .lsr-under-over {
+    top: 5%; }
+    #reach-under-header .lsr-under-over .home-buttons {
+      background-color: inherit; }
+      #reach-under-header .lsr-under-over .home-buttons .vc_btn3-container {
+        text-align: center;
+        margin-bottom: 0px;
+        padding: 4px 12px; }
+        #reach-under-header .lsr-under-over .home-buttons .vc_btn3-container .vc_general.vc_btn3 {
+          font-size: 14px;
+          padding: 14px 21px; } }
 @media only screen and (min-width: 481px) and (max-width: 959px) {
   .rev_slider, .header-hero-section {
     height: 400px !important; } }
