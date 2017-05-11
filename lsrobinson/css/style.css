@@ -487,7 +487,11 @@ blockquote {
   padding-top: 18px; }
 
 .single-content p a {
-  color: #868686; }
+  color: #3b53a4;
+  font-weight: bold; }
+
+.single-content .wpb_wrapper p a:hover {
+  color: #868686 !important; }
 
 .homes-template-default .meta-element-head, .prop_social_single, .vc_gitem_post_date {
   display: none; }
