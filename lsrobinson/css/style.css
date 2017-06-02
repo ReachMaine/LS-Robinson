@@ -466,12 +466,19 @@ blockquote {
 
 #access ul {
   margin: 0 0 0 6.1875em; }
+  #access ul a {
+    padding: 23px 11px; }
 
 #access .menu li:hover > a, #access #access .menu li:hover > a:active, #access .menu li:hover > a:focus, #access .current-menu-item > a, #access .current-menu-parent > a, #access .current-menu-ancestor > a {
   color: #3b53a4; }
 
 .hover_type_5 #access .menu > li:hover > a, .hover_type_5 #access .menu li.current-menu-item a {
   border-bottom: 3px solid #3b53a4; }
+
+.hover_type_5 #access .menu > li:hover > a {
+  padding: 7px 11px;
+  margin-left: 0;
+  margin-right: 0; }
 
 .navbar-fixed-top .logo img {
   max-height: 55px; }

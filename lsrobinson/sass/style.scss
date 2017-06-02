@@ -63,6 +63,9 @@ Text Domain:  wpestate-child
 
 #access ul {
   margin: 0 0 0 6.1875em; //move main menu to the right
+  a {
+    padding: 23px 11px; //tighten up menu items
+  }
 }
 
 #access{
@@ -73,6 +76,12 @@ Text Domain:  wpestate-child
 
 .hover_type_5  #access .menu > li:hover>a, .hover_type_5 #access .menu li.current-menu-item a { //change color under menu item on hover
   border-bottom: 3px solid $ls-robinson-blue;
+}
+
+.hover_type_5  #access .menu > li:hover>a {
+  padding: 7px 11px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .navbar-fixed-top .logo img {
