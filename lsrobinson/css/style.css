@@ -424,6 +424,10 @@ blockquote {
     clear: both; }
     .widget_woothemes_our_team .team-members.columns-3 .team-member {
       width: 48%; } }
+/* css for listings */
+.property_sidebar_container .booking-calendar-wrapper {
+  width: 100%; }
+
 /**** header *****/
 .topbar_on {
   top: 40px; }
@@ -572,6 +576,18 @@ blockquote {
     top: -45px;
     right: 17px;
     width: 40px; } }
+@media only screen and (min-width: 992px) {
+  .hide-desktop {
+    display: none; }
+
+  .visible-desktop {
+    display: block; } }
+@media only screen and (max-width: 991px) {
+  .hide-mobile {
+    display: none; }
+
+  .visible-mobile {
+    display: block; } }
 @media only screen and (min-width: 1181px) {
   .master_header.master_transparent_header + .header_media {
     min-height: 150px; } }

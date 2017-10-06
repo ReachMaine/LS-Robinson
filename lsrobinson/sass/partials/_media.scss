@@ -110,6 +110,23 @@
 
 
 }
+@media only screen and (min-width: 992px) { // point at which col's still side by side.
+	.hide-desktop {
+		display: none;
+	}
+	.visible-desktop {
+		display: block;
+	}
+
+}
+@media only screen and (max-width: 991px) { // point at which col's stack for listings
+	.hide-mobile {
+		display: none;
+	}
+	.visible-mobile {
+		display: block;
+	}
+}
 @media only screen and (max-width: 1180px) { // flips over mobile menu here.
 
 }
