@@ -250,7 +250,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
            wp_reset_query();
            ?>
        </div>
-       <?php 
+       <?php
         endwhile; // end of the loop
         $show_compare=1;
         ?>
