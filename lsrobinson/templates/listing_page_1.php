@@ -5,9 +5,7 @@
     - agent info
     - price table.
   move to sidebar
-   - Availability
    - map
-   - contact form (cf7?)
   */
 global $post;
 global $current_user;
@@ -246,11 +244,13 @@ $guest_list= wpestate_get_guest_dropdown('noany');
 
 
 
-        <?php /* zig - moved to 'sidebar'<div class="property_page_container ">
-               get_template_part ('/templates/show_avalability');
-            </div> */
-              wp_reset_query(); ?>
-        <?php
+        <div class="property_page_container ">
+           <?php
+           get_template_part ('/templates/show_avalability');
+           wp_reset_query();
+           ?>
+       </div>
+       <?php 
         endwhile; // end of the loop
         $show_compare=1;
         ?>
@@ -259,12 +259,6 @@ $guest_list= wpestate_get_guest_dropdown('noany');
 
 
         <?php     get_template_part ('/templates/listing_reviews'); ?>
-
-
-
-
-
-
 
         </div><!-- end single content -->
 
@@ -328,12 +322,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
             </div>
         </div>
 
-        <?php /* zig move availablity here */ ?>
-        <div class="property_sidebar_container">
-            <?php
-            get_template_part ('/templates/show_avalability');
-            ?>
-        </div>
+
         <?php  include(locate_template('sidebar-listing.php')); ?>
     </div>
 </div>
