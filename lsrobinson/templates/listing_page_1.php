@@ -141,7 +141,22 @@ $guest_list= wpestate_get_guest_dropdown('noany');
 
             <a href="#listing_calendar" class="check_avalability"><?php esc_html_e('Check Availability','wpestate');?></a>
         </div>
-
+        <!-- property price  zig moved up above description  -->
+        <div class="panel-wrapper" id="listing_price">
+            <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseOne"> <span class="panel-title-arrow"></span>
+                <?php if($property_price_text!=''){
+                    echo $property_price_text;
+                } else{
+                    esc_html_e('Property Price','wpestate');
+                }  ?>
+            </a>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body panel-body-border">
+                    <?php print estate_listing_price($post->ID); ?>
+                    <?php /* zig xout  wpestate_show_custom_details($post->ID);*/  ?>
+                </div>
+            </div>
+        </div>
 
 
         <div id="listing_description">
@@ -165,22 +180,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
         <div id="view_more_desc"><?php esc_html_e('View more','wpestate');?></div>
 
 
-        <!-- property price   -->
-        <div class="panel-wrapper" id="listing_price">
-            <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseOne"> <span class="panel-title-arrow"></span>
-                <?php if($property_price_text!=''){
-                    echo $property_price_text;
-                } else{
-                    esc_html_e('Property Price','wpestate');
-                }  ?>
-            </a>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body panel-body-border">
-                    <?php print estate_listing_price($post->ID); ?>
-                    <?php /* zig xout  wpestate_show_custom_details($post->ID);*/  ?>
-                </div>
-            </div>
-        </div>
+
 
 
 
@@ -297,7 +297,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
                     if( $price_per_guest_from_one == 1){
                         echo ' '.esc_html__( 'per guest','wpestate');
                     }else{
-                        echo ' '.esc_html__( 'per night','wpestate');
+                        /* echo ' '.esc_html__( 'per night','wpestate'); zig */
                     }
                 }
                 ?>

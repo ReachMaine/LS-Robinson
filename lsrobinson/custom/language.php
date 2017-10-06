@@ -10,7 +10,16 @@
 										case 'Email ' :
 											$translated_text = '<i class="fa fa-envelope"></i> ';
 										break;
-									} /* end our-team*/
+									}
+
+								break;/* end our-team*/
+						case 'wpestate':
+						switch ( $translated_text ) {
+								case 'Price per night' :
+									$translated_text = 'Price';
+								break;
+							}
+						break;
 					} /* end switch on domain */
 
 	    	return $translated_text;
