@@ -126,6 +126,17 @@
 	.visible-mobile {
 		display: block;
 	}
+	.listing_detail.list_detail_prop_price_per_night { // make price stand out at mobile. similar in styling to sidebar price.
+		.item_head {
+			display : none;
+		}
+		background-color: $ls-robinson-blue;
+		color: white;
+		padding: 20px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.4em;
+	}
 }
 @media only screen and (max-width: 1180px) { // flips over mobile menu here.
 

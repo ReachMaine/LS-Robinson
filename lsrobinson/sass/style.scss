@@ -14,9 +14,19 @@ Text Domain:  wpestate-child
 @import "partials/our_team";
 @import "partials/listings";
 /**** header *****/
+// two types of headers -
+//          transparent_header (most of the pages & the homes)
+//           and non-transparent (the properties & properties archive)
+.header_wrapper.top_bar_on:not(.transparent_header) { // non-transparent header....
+  //top: 40px;
+  //position: relative;
+  height: 120px;
+  #access {
+    padding-top: 38px;
+    #menu-main-menu {
 
-.topbar_on {
-  top: 40px;
+    }
+  }
 }
 .logo img {
   max-height: 100px //increase logo size
@@ -48,6 +58,15 @@ Text Domain:  wpestate-child
 
 .user_mobile_menu_list li:hover a, .mobilex-menu li:hover a {
   color: white;
+}
+.header_wrapper #access a {
+    color: $ls-robinson-blue!important;
+}
+#access ul ul a{
+    color: $ls-robinson-blue;
+}
+#access ul.menu >li>a {
+     font-size:13px;
 }
 // under header widget area
 #reach-under-header {
