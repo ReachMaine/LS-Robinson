@@ -1,4 +1,19 @@
 /* css for listings */
+// all listings, single & boxed (for archive, search & similar)
+.property_unit_action .icon-fav { // dont show favorite icon
+  display: none;
+}
+// archive - boxed used for search listing, archive & similar listings
+.listing_wrapper {
+  .property_listing  {
+    .title-container {
+      .price_unit_wrapper {
+        top: 0px;
+      }
+    }
+  }
+
+}
 
 // ** single listing
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {

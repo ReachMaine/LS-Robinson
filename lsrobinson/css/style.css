@@ -416,6 +416,12 @@ blockquote {
     .widget_woothemes_our_team .team-members.columns-3 .team-member {
       width: 48%; } }
 /* css for listings */
+.property_unit_action .icon-fav {
+  display: none; }
+
+.listing_wrapper .property_listing .title-container .price_unit_wrapper {
+  top: 0px; }
+
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none; }
 
