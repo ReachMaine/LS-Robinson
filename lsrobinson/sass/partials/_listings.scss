@@ -39,4 +39,10 @@
       }
     }
   }
+  .listing_detail.list_detail_prop_area,
+  .listing_detail.list_detail_prop_status,
+  .listing_detail.list_detail_prop_id {
+    display: none;
+  }
+
 }
