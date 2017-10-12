@@ -419,11 +419,30 @@ blockquote {
 .property_unit_action .icon-fav {
   display: none; }
 
+.property_status.status_verified {
+  display: none; }
+
 .listing_wrapper .property_listing .title-container .price_unit_wrapper {
   top: 0px; }
+  .listing_wrapper .property_listing .title-container .price_unit_wrapper .price_unit {
+    font-size: 1.1em; }
+.listing_wrapper .property_listing .title-container .category_name a {
+  padding-right: 0px;
+  margin-right: 0px; }
 
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none; }
+
+.content_wrapper.listing_wrapper .category_wrapper .category_details_wrapper a[rel="tag"] {
+  margin-right: 0px; }
+.content_wrapper.listing_wrapper .listing_detail.list_detail_prop_area,
+.content_wrapper.listing_wrapper .listing_detail.list_detail_prop_status,
+.content_wrapper.listing_wrapper .listing_detail.list_detail_prop_id {
+  display: none; }
+
+/* CF7 Styling */
+form.wpcf7-form input, form.wpcf7-form textarea {
+  border: 1px solid #a8c2ce; }
 
 /**** header *****/
 .header_wrapper.top_bar_on:not(.transparent_header) {
@@ -520,6 +539,12 @@ blockquote {
 
 .vc_btn3-style-flat {
   background-color: #3b53a4 !important; }
+
+.lsr-boxed {
+  padding-top: 20px;
+  padding-left: 10px;
+  background-color: #e7f0f4;
+  border: 1px solid #a8c2ce; }
 
 #reach-bottom-cta {
   padding-bottom: 30px; }

@@ -13,6 +13,7 @@ Text Domain:  wpestate-child
 @import "partials/homes";
 @import "partials/our_team";
 @import "partials/listings";
+@import "partials/cf7";
 /**** header *****/
 // two types of headers -
 //          transparent_header (most of the pages & the homes)
@@ -141,7 +142,14 @@ Text Domain:  wpestate-child
 .vc_btn3-style-flat {
   background-color: $ls-robinson-blue !important;
 }
+// sidebar
+.lsr-boxed {
+  padding-top: 20px;
+  padding-left: 10px;
+  background-color: $lsr-light-blue;
+  border: 1px solid $lsr-border-blue;
 
+}
 // reach cta
 #reach-bottom-cta {
   padding-bottom: 30px;

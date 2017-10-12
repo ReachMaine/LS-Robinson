@@ -110,7 +110,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
         </h1>
 
         <div class="listing_main_image_location">
-            <?php print  $property_city.', '.$property_area; ?>
+            <?php print  $property_city; // zig remove area ?>
         </div>
 
 
@@ -184,7 +184,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
 
 
 
-        <div class="panel-wrapper">
+        <?php /* <div class="panel-wrapper">
             <!-- property address   -->
             <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTwo">  <span class="panel-title-arrow"></span>
                 <?php if($property_adr_text!=''){
@@ -199,7 +199,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
                     <?php print estate_listing_address($post->ID); ?>
                 </div>
             </div>
-        </div>
+        </div> */ ?>
 
 
 
@@ -321,7 +321,20 @@ $guest_list= wpestate_get_guest_dropdown('noany');
                 </div>
             </div>
         </div>
+          <? /* zig moved map to here */ ?>
+        <div class="property_sidebar_container">
+            <!-- property address   -->
+                <?php if($property_adr_text!=''){
+                    echo $property_adr_text;
+                } else{
+                    esc_html_e('Property Address','wpestate');
+                }
+                ?>
 
+                <div class="panel-body panel-body-border">
+                    <?php print estate_listing_address($post->ID); ?>
+                </div>
+        </div>
 
         <?php  include(locate_template('sidebar-listing.php')); ?>
     </div>

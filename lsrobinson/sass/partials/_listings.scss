@@ -3,12 +3,24 @@
 .property_unit_action .icon-fav { // dont show favorite icon
   display: none;
 }
+.property_status.status_verified { // dont show verified label.
+  display: none;
+}
 // archive - boxed used for search listing, archive & similar listings
 .listing_wrapper {
   .property_listing  {
     .title-container {
       .price_unit_wrapper {
         top: 0px;
+        .price_unit {
+          font-size: 1.1em;
+        }
+      }
+      .category_name {
+        a {
+          padding-right: 0px;
+          margin-right: 0px;
+        }
       }
     }
   }
@@ -18,4 +30,13 @@
 // ** single listing
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none;
+}
+.content_wrapper.listing_wrapper{
+  .category_wrapper {
+    .category_details_wrapper {
+      a[rel="tag"] {
+        margin-right: 0px;
+      }
+    }
+  }
 }
