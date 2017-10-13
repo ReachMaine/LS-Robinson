@@ -146,4 +146,9 @@
 	.master_header.master_transparent_header+.header_media {  // master_transparent_header followed by header_media
 	    min-height: 150px;
 	}
+	.top_bar_on .full_map_container {
+	  #google_map_prop_list_wrapper, #google_map_prop_list_sidebar {
+	    top: 190px;
+	  }
+	}
 }

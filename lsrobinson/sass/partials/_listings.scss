@@ -7,6 +7,8 @@
   display: none;
 }
 // archive - boxed used for search listing, archive & similar listings
+
+
 .listing_wrapper {
   .property_listing  {
     .title-container {
@@ -45,4 +47,19 @@
     display: none;
   }
 
+}
+
+// user dashboard for editing & new
+.user_dashboard_panel {
+  label[for="property_rooms"],
+  #property_rooms {
+    display: none;
+  }
+}
+
+// advanced search box on archive
+#advanced_search_map_list {
+  .col-md-6.map_icon {
+    display: none;
+  }
 }

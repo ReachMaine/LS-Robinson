@@ -1,6 +1,7 @@
 <?php
 /* mods
    12Oct17 dont show rooms DDL
+   13Oct17 -zig - or the "Where do you want to go box"
 */
 $adv_submit             =   wpestate_get_adv_search_link();
 $guest_list             =   wpestate_get_guest_dropdown();
@@ -34,7 +35,7 @@ if ($where_currency == 'before') {
 <div id="advanced_search_map_list">
     <div class="advanced_search_map_list_container">
 
-
+      <?php /* zig x-out, everything is in mount desert, so this is silly
         <div class="col-md-6 map_icon">
              <?php
             $show_adv_search_general            =   get_option('wp_estate_wpestate_autocomplete','');
@@ -56,10 +57,7 @@ if ($where_currency == 'before') {
             <input type="hidden" id="search_location_country"    value="<?php if(isset( $_GET['advanced_country'] )){echo wp_kses ( esc_attr($_GET['advanced_country']),$allowed_html);}?>" >
             <input type="hidden" id="property_admin_area" name="property_admin_area"  value="<?php if(isset( $_GET['property_admin_area'] )){echo wp_kses ( esc_attr($_GET['property_admin_area']),$allowed_html);}?>" >
 
-        </div>
-
-
-
+        </div> */ ?>
         <div class="col-md-3 has_calendar calendar_icon ">
             <input type="text" id="check_in_list"        class="form-control" name="check_in"  placeholder="<?php esc_html_e('Check in','wpestate');?>" value="<?php if(isset( $_GET['check_in'] )){echo wp_kses (  esc_attr($_GET['check_in']),$allowed_html);}?>" >
         </div>

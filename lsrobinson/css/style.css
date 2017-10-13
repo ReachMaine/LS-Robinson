@@ -440,6 +440,13 @@ blockquote {
 .content_wrapper.listing_wrapper .listing_detail.list_detail_prop_id {
   display: none; }
 
+.user_dashboard_panel label[for="property_rooms"],
+.user_dashboard_panel #property_rooms {
+  display: none; }
+
+#advanced_search_map_list .col-md-6.map_icon {
+  display: none; }
+
 /* CF7 Styling */
 form.wpcf7-form input, form.wpcf7-form textarea {
   border: 1px solid #a8c2ce; }
@@ -633,4 +640,7 @@ form.wpcf7-form input, form.wpcf7-form textarea {
       display: none; } }
 @media only screen and (min-width: 1181px) {
   .master_header.master_transparent_header + .header_media {
-    min-height: 150px; } }
+    min-height: 150px; }
+
+  .top_bar_on .full_map_container #google_map_prop_list_wrapper, .top_bar_on .full_map_container #google_map_prop_list_sidebar {
+    top: 190px; } }

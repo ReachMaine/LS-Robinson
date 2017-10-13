@@ -1,0 +1,8 @@
+Theme notes:
+
+1.  changed layout of single property (rental)
+2.  change "Sizes" to "Areas"
+3.  Similar listings to 3 per row instead of 2 per row.
+4.  Not using Rooms (hidden by css)
+5.  Not using the Verified (hidden by css)
+6.  Not using the favorites since need to create user for that.  Not going there.

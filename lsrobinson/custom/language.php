@@ -18,6 +18,9 @@
 								case 'Price per night' :
 									$translated_text = 'Price';
 								break;
+								case 'All Sizes' :
+									$translated_text = "All Environs";
+								break;
 							}
 						break;
 					} /* end switch on domain */
