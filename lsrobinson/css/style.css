@@ -439,6 +439,14 @@ blockquote {
 .content_wrapper.listing_wrapper .listing_detail.list_detail_prop_status,
 .content_wrapper.listing_wrapper .listing_detail.list_detail_prop_id {
   display: none; }
+.content_wrapper.listing_wrapper .widget-area-sidebar.listing_type_1 .property_sidebar_container {
+  clear: both;
+  padding-top: 10px; }
+  .content_wrapper.listing_wrapper .widget-area-sidebar.listing_type_1 .property_sidebar_container h3.panel-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #5d6475;
+    margin-bottom: 15px; }
 
 .user_dashboard_panel label[for="property_rooms"],
 .user_dashboard_panel #property_rooms {

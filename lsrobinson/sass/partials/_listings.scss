@@ -46,6 +46,18 @@
   .listing_detail.list_detail_prop_id {
     display: none;
   }
+  .widget-area-sidebar.listing_type_1 {
+    .property_sidebar_container {
+      clear: both;
+      padding-top: 10px;
+      h3.panel-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #5d6475;
+        margin-bottom: 15px;
+      }
+    }
+  }
 
 }
 

@@ -138,7 +138,7 @@
     if( is_page() && wpestate_check_if_admin_page($post->ID) && is_user_logged_in()  ){
         $is_dashboard_page='is_dashboard_page';
         if( get_option('wp_estate_show_menu_dashboard','') =='no'){
-            $is_top_bar_class.=" no_header_dash ";
+            //$is_top_bar_class.=" no_header_dash ";  // zig cant turn this off! so there.
         }
     }
 
