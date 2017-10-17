@@ -28,7 +28,7 @@ $property_bathrooms =   '';
 $property_rooms     =   '';
 $measure_sys        =   '';
 
-$col_class  =   'col-md-4';// zig changed from 6 to 4.
+$col_class  =   'col-md-3';// zig changed from 6 to 3.
 $col_org    =   4;
  $title=get_the_title($post->ID);
 

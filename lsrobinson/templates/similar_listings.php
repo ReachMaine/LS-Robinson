@@ -1,5 +1,6 @@
 <?php
 //related listings
+/* Oct17 - zig -  use 4 similar listings */
 global $full_page;
 global $is_widget;
 global $show_sim_two;
@@ -76,11 +77,11 @@ endif;
 ////////////////////////////////////////////////////////////////////////////
 
 if(isset($show_sim_two) && $show_sim_two==1){
-    $similar_no=2;
+    $similar_no=4;
 }
 
 $args=array(
-    'showposts'             => $similar_no,      
+    'showposts'             => $similar_no,
     'ignore_sticky_posts'   => 0,
     'post_type'             => 'estate_property',
     'post_status'           => 'publish',
@@ -97,18 +98,18 @@ global $listing_type;
 $listing_type   =   get_option('wp_estate_listing_unit_type','');
 $compare_submit =   wpestate_get_compare_link();
 $my_query = new WP_Query($args);
-   
-    if ($my_query->have_posts()) { ?>	
+
+    if ($my_query->have_posts()) { ?>
         <div class="similar_listings_wrapper">
             <div class="similar_listings">
-                <?php  // get_template_part('templates/compare_list'); ?> 
+                <?php  // get_template_part('templates/compare_list'); ?>
 
-                <h3 class="agent_listings_title_similar" ><?php esc_html_e('Similar Listings', 'wpestate'); ?></h3>   
+                <h3 class="agent_listings_title_similar" ><?php esc_html_e('Similar Listings', 'wpestate'); ?></h3>
                 <?php
-                $property_unit_slider= esc_html ( get_option('wp_estate_prop_list_slider','') );    
-    
+                $property_unit_slider= esc_html ( get_option('wp_estate_prop_list_slider','') );
+
                 while ($my_query->have_posts()):$my_query->the_post();
-                    get_template_part('templates/property_unit');  
+                    get_template_part('templates/property_unit');
                 endwhile;
                 ?>
             </div>
@@ -119,4 +120,4 @@ $my_query = new WP_Query($args);
 
 <?php
 wp_reset_query();
-?> 
+?>
