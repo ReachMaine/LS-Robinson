@@ -452,8 +452,8 @@ blockquote {
 .user_dashboard_panel #property_rooms {
   display: none; }
 
-#advanced_search_map_list .col-md-6.map_icon {
-  display: none; }
+#advanced_search_map_list #extended_search_check_filter {
+  display: block; }
 
 /* CF7 Styling */
 form.wpcf7-form input, form.wpcf7-form textarea {
