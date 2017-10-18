@@ -19,7 +19,7 @@
 									$translated_text = 'Price';
 								break;
 								case 'All Sizes' :
-									$translated_text = "All Environs";
+									$translated_text = "All Area Types";
 								break;
 							}
 						break;
