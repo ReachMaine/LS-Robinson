@@ -15,6 +15,15 @@ Text Domain:  wpestate-child
 @import "partials/listings";
 @import "partials/cf7";
 /**** header *****/
+// top_bar
+.top_bar{
+  // hover colors
+  a:hover,
+  .social_sidebar_internal a:hover,
+  .social_sidebar_internal a:hover i {
+    color:$lsr-dkrlight-grey;
+  }
+}
 // two types of headers -
 //          transparent_header (most of the pages & the homes)
 //           and non-transparent (the properties & properties archive)

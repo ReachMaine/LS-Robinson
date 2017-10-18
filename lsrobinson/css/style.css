@@ -460,6 +460,11 @@ form.wpcf7-form input, form.wpcf7-form textarea {
   border: 1px solid #a8c2ce; }
 
 /**** header *****/
+.top_bar a:hover,
+.top_bar .social_sidebar_internal a:hover,
+.top_bar .social_sidebar_internal a:hover i {
+  color: #c5c5c5; }
+
 .header_wrapper.top_bar_on:not(.transparent_header) {
   height: 120px; }
   .header_wrapper.top_bar_on:not(.transparent_header) #access {
