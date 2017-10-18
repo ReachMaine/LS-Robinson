@@ -21,6 +21,9 @@
 								case 'All Sizes' :
 									$translated_text = "All Area Types";
 								break;
+								case 'Where do you want to go ?':
+									$translated_text = "Which town?";
+								break;
 							}
 						break;
 					} /* end switch on domain */
