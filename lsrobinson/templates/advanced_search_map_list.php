@@ -1,7 +1,7 @@
 <?php
 /* mods
    12Oct17 dont show rooms DDL
-   13Oct17 -zig - or the "Where do you want to go box"
+
 */
 $adv_submit             =   wpestate_get_adv_search_link();
 $guest_list             =   wpestate_get_guest_dropdown();
@@ -95,10 +95,11 @@ if ($where_currency == 'before') {
             </div>
         </div> */ ?>
 
-
+        <?php /* zig, changes here - default to vacation, dont have an all */ ?>
         <div class="col-md-3">
+          <?php  $categ_select_list = str_replace('<li role="presentation" data-value="all">All Types</li>', "", $categ_select_list); // zig - remove all Types      ?>
             <div class="dropdown form-control types_icon" id="categ_list" >
-                <div data-toggle="dropdown" id="adv_categ" class="filter_menu_trigger" data-value="all"> <?php esc_html_e('All Types','wpestate');?> <span class="caret caret_filter"></span> </div>
+                <div data-toggle="dropdown" id="adv_categ" class="filter_menu_trigger" data-value="vacation"> <?php esc_html_e('Vacation Rental','wpestate');?> <span class="caret caret_filter"></span> </div>
                 <input type="hidden" name="filter_search_type[]" value="">
                 <ul  class="dropdown-menu filter_menu" role="menu" aria-labelledby="adv_categ">
                     <?php  print wp_kses($categ_select_list,$allowed_html_list); ?>
