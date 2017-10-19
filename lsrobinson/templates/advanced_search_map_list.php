@@ -35,7 +35,7 @@ if ($where_currency == 'before') {
 <div id="advanced_search_map_list">
     <div class="advanced_search_map_list_container">
 
-        <div class="col-md-6 map_icon">
+        <div class="col-md-3 map_icon">
              <?php
             $show_adv_search_general            =   get_option('wp_estate_wpestate_autocomplete','');
             $wpestate_internal_search           =   '';
@@ -99,7 +99,7 @@ if ($where_currency == 'before') {
         <div class="col-md-3">
           <?php  $categ_select_list = str_replace('<li role="presentation" data-value="all">All Types</li>', "", $categ_select_list); // zig - remove all Types      ?>
             <div class="dropdown form-control types_icon" id="categ_list" >
-                <div data-toggle="dropdown" id="adv_categ" class="filter_menu_trigger" data-value="vacation"><?php esc_html_e('Vacation Rental','wpestate');?><span class="caret caret_filter"></span> </div>
+                <div data-toggle="dropdown" id="adv_categ" class="filter_menu_trigger" data-value="vacation"><?php esc_html_e('Vacation','wpestate');?><span class="caret caret_filter"></span> </div>
                 <input type="hidden" name="filter_search_type[]" value="">
                 <ul  class="dropdown-menu filter_menu" role="menu" aria-labelledby="adv_categ">
                     <?php  print wp_kses($categ_select_list,$allowed_html_list); ?>
@@ -119,7 +119,7 @@ if ($where_currency == 'before') {
 
 
 
-
+        <?php /* zig xout per conversations with julie
         <div class="col-md-3">
             <div class="dropdown form-control bedrooms_icon" >
                 <div data-toggle="dropdown" id="beds_no" class="filter_menu_trigger" data-value="all"><?php echo  esc_html__( 'Bedrooms','wpestate');?> <span class="caret caret_filter"></span> </div>
@@ -128,8 +128,8 @@ if ($where_currency == 'before') {
                     <?php echo wpestate_get_bedrooms_dropdown(); ?>
                 </ul>
             </div>
-        </div>
-
+        </div> */ ?>
+        <?php /* zig xout per conversations with julie
         <div class="col-md-3">
             <div class="dropdown form-control baths_icon" >
                 <div data-toggle="dropdown" id="baths_no" class="filter_menu_trigger" data-value="all"><?php echo esc_html__( 'Baths','wpestate');?> <span class="caret caret_filter"></span> </div>
@@ -138,7 +138,7 @@ if ($where_currency == 'before') {
                     <?php echo wpestate_get_baths_dropdown(); ?>
                 </ul>
             </div>
-        </div>
+        </div> */ ?>
 
         <div class="col-md-6">
             <div class="adv_search_slider">
