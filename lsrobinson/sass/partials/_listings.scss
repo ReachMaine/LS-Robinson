@@ -68,10 +68,19 @@
     display: none;
   }
 }
-
+/**** advanced search *****/
 // advanced search box on archive
 #advanced_search_map_list {
   #extended_search_check_filter {
     display: block;
+  }
+}
+#google_map_prop_list {
+  .mybox {
+    .info_details {
+      .prop_pricex {
+        display: none; // hide the price on the box on google map.
+      }
+    }
   }
 }

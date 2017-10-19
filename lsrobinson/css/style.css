@@ -452,8 +452,12 @@ blockquote {
 .user_dashboard_panel #property_rooms {
   display: none; }
 
+/**** advanced search *****/
 #advanced_search_map_list #extended_search_check_filter {
   display: block; }
+
+#google_map_prop_list .mybox .info_details .prop_pricex {
+  display: none; }
 
 /* CF7 Styling */
 form.wpcf7-form input, form.wpcf7-form textarea {
@@ -503,8 +507,8 @@ form.wpcf7-form input, form.wpcf7-form textarea {
 #access ul ul a {
   color: #3b53a4; }
 
-#access ul.menu > li > a {
-  font-size: 13px; }
+.website-wrapper #access ul.menu > li > a {
+  font-size: 16px; }
 
 #reach-under-header {
   height: 0px; }
