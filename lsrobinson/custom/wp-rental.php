@@ -126,33 +126,3 @@ function wpestate_show_price_booking($price,$currency,$where_currency,$return=0)
 endif; //wpestate_show_price_booking
 
 /* **************** */
-// take off the close button
-
-if( !function_exists('wpestate_show_extended_search') ):
-    function wpestate_show_extended_search($tip){
-        print '<div class="extended_search_check_wrapper" id="extended_search_check_filter">';
-
-        print '
-        <div class="secondrow">        </div>';
-        /* zig xout print '<span id="adv_extended_close_adv"><i class="fa fa-times"></i></span>'; */
-
-               $advanced_exteded   =   get_option( 'wp_estate_advanced_exteded', true);
-
-               foreach($advanced_exteded as $checker => $value){
-                   $post_var_name  =   str_replace(' ','_', trim($value) );
-                   $input_name     =   wpestate_limit45(sanitize_title( $post_var_name ));
-                   $input_name     =   sanitize_key($input_name);
-
-                   if (function_exists('icl_translate') ){
-                       $value     =   icl_translate('wpestate','wp_estate_property_custom_amm_'.$value, $value ) ;
-                   }
-
-                  $value= str_replace('_',' ', trim($value) );
-                  if($value!='none'){
-                    print '<div class="extended_search_checker"><input type="checkbox" id="'.$input_name.$tip.'" name="'.$input_name.'" value="1" ><label for="'.$input_name.$tip.'">'.stripslashes($value). '</label></div>';
-                  }
-               }
-
-        print '</div>';
-    }
-endif; // wpestate_show_extended_search
