@@ -461,7 +461,8 @@ blockquote {
 
 /* CF7 Styling */
 form.wpcf7-form input, form.wpcf7-form textarea {
-  border: 1px solid #a8c2ce; }
+  border: 1px solid #a8c2ce;
+  max-width: 98%; }
 
 /**** header *****/
 .top_bar a:hover,
@@ -655,6 +656,9 @@ form.wpcf7-form input, form.wpcf7-form textarea {
     font-size: 1.4em; }
     .listing_detail.list_detail_prop_price_per_night .item_head {
       display: none; } }
+@media only screen and (max-width: 1180px) {
+  .top_bar_on .full_map_container #google_map_prop_list_wrapper, .top_bar_on .full_map_container #google_map_prop_list_sidebar {
+    top: 110px; } }
 @media only screen and (min-width: 1181px) {
   .master_header.master_transparent_header + .header_media {
     min-height: 150px; }

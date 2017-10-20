@@ -2,5 +2,6 @@
 form.wpcf7-form {
   input, textarea {
     border: 1px solid $lsr-border-blue;
+    max-width: 98%; // make sure fits container (esp. mobile)
   }
 }
