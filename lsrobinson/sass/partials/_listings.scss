@@ -7,8 +7,6 @@
   display: none;
 }
 // archive - boxed used for search listing, archive & similar listings
-
-
 .listing_wrapper {
   .property_listing  {
     .title-container {
@@ -27,6 +25,16 @@
     }
   }
 
+}
+ // archive flips to image on top at 667
+@media only screen and (min-width: 668px) {
+  .listing_wrapper {
+    .property_listing  {
+      .listing-unit-img-wrapper {
+        max-width: 275px;
+      }
+    }
+  }
 }
 
 // ** single listing

@@ -430,6 +430,9 @@ blockquote {
   padding-right: 0px;
   margin-right: 0px; }
 
+@media only screen and (min-width: 668px) {
+  .listing_wrapper .property_listing .listing-unit-img-wrapper {
+    max-width: 275px; } }
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none; }
 
