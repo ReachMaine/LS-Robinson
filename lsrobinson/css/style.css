@@ -438,6 +438,9 @@ blockquote {
 
 .content_wrapper.listing_wrapper .category_wrapper .category_details_wrapper a[rel="tag"] {
   margin-right: 0px; }
+.content_wrapper.listing_wrapper #listing_description {
+  max-height: 100% !important;
+  overflow: initial !important; }
 .content_wrapper.listing_wrapper .listing_detail.list_detail_prop_area,
 .content_wrapper.listing_wrapper .listing_detail.list_detail_prop_status,
 .content_wrapper.listing_wrapper .listing_detail.list_detail_prop_id {

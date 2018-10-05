@@ -41,13 +41,17 @@
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none;
 }
-.content_wrapper.listing_wrapper{
+.content_wrapper.listing_wrapper {
   .category_wrapper {
     .category_details_wrapper {
       a[rel="tag"] {
         margin-right: 0px;
       }
     }
+  }
+  #listing_description {
+    max-height: 100%!important; // over-write the show less
+    overflow: initial!important;
   }
   .listing_detail.list_detail_prop_area,
   .listing_detail.list_detail_prop_status,
