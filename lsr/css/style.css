@@ -581,3 +581,24 @@ blockquote {
 .header_wrapper.header_type1.header_align_left #user_menu_open,
 .header_wrapper.header_type2.header_align_left #user_menu_open {
   top: 50px; }
+
+/* Header */
+.header_wrapper.top_bar_on:not(.transparent_header) {
+  height: 120px; }
+  .header_wrapper.top_bar_on:not(.transparent_header) #access {
+    padding-top: 38px; }
+
+.logo img {
+  max-height: 100px; }
+
+.mobile-logo img {
+  max-height: auto; }
+
+.transparent_header.header_wide_yes .header_wrapper_inside {
+  top: 65px; }
+
+.header_media {
+  background-color: #e6e6e6; }
+
+.header_media:empty {
+  border-bottom: 4px solid #3b53a4; }

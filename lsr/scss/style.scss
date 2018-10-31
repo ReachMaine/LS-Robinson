@@ -100,3 +100,34 @@ Text Domain:  wpestate-child
 /* end css in given child theme */
 @import "partials/colors";
 @import "partials/wprentals"; // import as per theme options.
+
+/* Header */
+// two types of headers -
+//          transparent_header (most of the pages & the homes)
+//           and non-transparent (the properties & properties archive)
+.header_wrapper.top_bar_on:not(.transparent_header) { // non-transparent header....
+  //top: 40px;
+  //position: relative;
+  height: 120px;
+  #access {
+    padding-top: 38px;
+    #menu-main-menu {
+
+    }
+  }
+}
+.logo img {
+  max-height: 100px //increase logo size
+}
+.mobile-logo img {
+  max-height: auto;
+}
+.transparent_header.header_wide_yes .header_wrapper_inside {
+  top: 65px;
+}
+.header_media {
+  background-color: $lsr-light-grey;
+}
+.header_media:empty {
+    border-bottom: 4px solid $ls-robinson-blue;
+}
