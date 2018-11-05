@@ -1,12 +1,16 @@
 </div><!-- end content_wrapper started in header or full_width_row from prop list -->
-
+<?php /* mods
+  zig - add widget area display
+*/ ?>
 <?php
 
-$footer_background          =   get_option('wp_estate_footer_background','');
-$repeat_footer_back_status  =   get_option('wp_estate_repeat_footer_back','');
+
+
+$footer_background          =   wprentals_get_option('wp_estate_footer_background','url');
+$repeat_footer_back_status  =   wprentals_get_option('wp_estate_repeat_footer_back');
 $footer_style               =   '';
 $footer_back_class          =   '';
-$wide_footer        =   get_option('wp_estate_wide_footer','');
+$wide_footer        =   wprentals_get_option('wp_estate_wide_footer');
 
 if ($footer_background!=''){
     $footer_style='style=" background-image: url('.$footer_background.') "';
@@ -29,15 +33,14 @@ if( !is_search() && !is_category() && !is_tax() &&  !is_tag() &&  !is_archive() 
 } else if(!is_search() && !is_category() && !is_tax() &&  !is_tag() &&  !is_archive() && basename(get_page_template($post->ID)) == 'property_list_half.php'){
     // do nothing for now
 
-} else if( ( is_category() || is_tax() ) &&  get_option('wp_estate_property_list_type','')==2){
+} else if( ( is_category() || is_tax() ) &&  wprentals_get_option('wp_estate_property_list_type')==2){
     // do nothing for now
 
-} else if(  is_page_template('advanced_search_results.php') &&  get_option('wp_estate_property_list_type_adv','')==2){
+} else if(  is_page_template('advanced_search_results.php') &&  wprentals_get_option('wp_estate_property_list_type_adv')==2){
     // do nothing for now
 
 }else{
 ?>
-
 <?php if (is_active_sidebar('reach-bottom-cta')) {
         echo '<div id="reach-bottom-cta" class="row clearfix">';
             echo '<div id="reach-bottom-cta-wrap" class="col-md-12">';
@@ -46,7 +49,8 @@ if( !is_search() && !is_category() && !is_tax() &&  !is_tag() &&  !is_archive() 
         echo '</div>';
     }
 ?>
-<footer id="colophon" <?php echo $footer_style; ?> class=" <?php echo $footer_back_class;?> ">
+
+<footer id="colophon" <?php print $footer_style; ?> class=" <?php print $footer_back_class;?> ">
     <?php
         $wide_footer_class='';
         if($wide_footer=='yes'){
@@ -54,18 +58,18 @@ if( !is_search() && !is_category() && !is_tax() &&  !is_tag() &&  !is_archive() 
         }
         ?>
 
-    <div id="footer-widget-area" class="row <?php echo $wide_footer_class;?>">
+    <div id="footer-widget-area" class="row <?php print $wide_footer_class;?>">
         <?php  get_sidebar('footer');?>
     </div><!-- #footer-widget-area -->
 
     <div class="sub_footer">
-        <div class="sub_footer_content <?php echo $wide_footer_class;?>">
+        <div class="sub_footer_content <?php print $wide_footer_class;?>">
             <span class="copyright">
                 <?php
                 if (function_exists('icl_translate') ){
-                    print $property_copy_text      =   icl_translate('wpestate','wp_estate_property_copyright_text', stripslashes ( esc_html( get_option('wp_estate_copyright_message') ) ) );
+                    print $property_copy_text      =   icl_translate('wprentals','wp_estate_property_copyright_text', stripslashes ( esc_html( wprentals_get_option('wp_estate_copyright_message') ) ) );
                 }else{
-                    print stripslashes ( esc_html (get_option('wp_estate_copyright_message', '') ) );
+                    print stripslashes ( esc_html (wprentals_get_option('wp_estate_copyright_message') ) );
                 }
                 ?>
             </span>
@@ -84,27 +88,13 @@ if( !is_search() && !is_category() && !is_tax() &&  !is_tag() &&  !is_archive() 
 
 <?php } // end property_list_half?>
 <?php get_template_part('templates/footer_buttons');?>
-<?php wp_get_schedules(); ?>
-<?php wp_footer();  ?>
-
 <?php
-    $ga = esc_html(get_option('wp_estate_google_analytics_code', ''));
-    if ($ga != '') {  ?>
-
-        <script>
-            //<![CDATA[
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', '<?php echo $ga; ?>', '<?php     echo $_SERVER['SERVER_NAME']; ?>');
-          ga('send', 'pageview');
-        //]]>
-        </script>
-<?php
+    if(is_singular('estate_property')){
+        get_template_part('templates/book_per_hour_form');
     }
 ?>
+<?php wp_get_schedules(); ?>
+<?php wp_footer();  ?>
 
 </div> <!-- end class container -->
 
@@ -112,5 +102,49 @@ if( !is_search() && !is_category() && !is_tax() &&  !is_tag() &&  !is_archive() 
 
 </div> <!-- end website wrapper -->
 
+
+<?php
+if(is_singular('estate_property') ){
+    ?>
+    <!-- Modal -->
+   <div class="modal fade" id="instant_booking_modal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                   <h2 class="modal-title_big" ><?php esc_html_e( 'Confirm your booking','wprentals');?></h2>
+                   <h4 class="modal-title" id="myModalLabel"><?php esc_html_e( 'Review the dates and confirm your booking','wprentals');?></h4>
+               </div>
+
+               <div class="modal-body"></div>
+
+
+
+
+               </div><!-- /.modal-content -->
+           </div><!-- /.modal-dialog -->
+       </div><!-- /.modal -->
+   </div>
+<?php
+}
+//  && isset($_GET['guest_no_prop'])
+if ( isset($_GET['check_in_prop']) && isset($_GET['check_out_prop'])   ){
+
+      print '<script type="text/javascript">
+              //<![CDATA[
+              jQuery(document).ready(function(){
+                  jQuery("#end_date,#start_date").parent().removeClass("calendar_icon");
+                  jQuery("#end_date").trigger("change");
+              });
+              //]]>
+      </script>';
+
+  }
+
+if( is_singular('estate_property') || is_singular('estate_agent')){
+    wpestate_ajax_show_contact_owner_form();
+}
+
+?>
 </body>
 </html>

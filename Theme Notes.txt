@@ -6,3 +6,7 @@ Theme notes:
 4.  Not using Rooms (hidden by css)
 5.  Not using the Verified (hidden by css)
 6.  Not using the favorites since need to create user for that.  Not going there.
+
+ - widget Under Header widget for buttons on homepage.  (header-media.php)
+ - widget Bottom call to action (footer.php)
+ - turn off breadcrumbs (templates/breadcrumbs.php)
