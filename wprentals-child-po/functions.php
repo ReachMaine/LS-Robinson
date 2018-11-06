@@ -17,7 +17,7 @@ add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css' );
 
 // END ENQUEUE PARENT ACTION
 require_once(get_stylesheet_directory().'/custom/branding.php');
-//require_once(get_stylesheet_directory().'/custom/language.php');
+require_once(get_stylesheet_directory().'/custom/language.php');
 //require_once(get_stylesheet_directory().'/custom/wp-rental.php');
 
   /* add custom widgets  */
