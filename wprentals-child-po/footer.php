@@ -40,6 +40,7 @@ if( !is_search() && !is_category() && !is_tax() &&  !is_tag() &&  !is_archive() 
     // do nothing for now
 
 }else{
+
 ?>
 <?php if (is_active_sidebar('reach-bottom-cta')) {
         echo '<div id="reach-bottom-cta" class="row clearfix">';
