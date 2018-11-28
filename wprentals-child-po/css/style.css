@@ -430,9 +430,6 @@ blockquote {
   padding-right: 0px;
   margin-right: 0px; }
 
-@media only screen and (min-width: 668px) {
-  .listing_wrapper .property_listing .listing-unit-img-wrapper {
-    max-width: 275px; } }
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none; }
 
@@ -572,8 +569,6 @@ form.wpcf7-form input, form.wpcf7-form textarea {
   background-color: #3b53a4 !important; }
 
 .lsr-boxed {
-  padding-top: 20px;
-  padding-left: 10px;
   background-color: #e7f0f4;
   border: 1px solid #a8c2ce; }
 

@@ -31,7 +31,7 @@
   .listing_wrapper {
     .property_listing  {
       .listing-unit-img-wrapper {
-        max-width: 275px;
+        //max-width: 275px; // not necessary, i think, max height does the trick.  may have to revisit
       }
     }
   }
