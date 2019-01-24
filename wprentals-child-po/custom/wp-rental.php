@@ -36,7 +36,7 @@ function lsr_quickedit_fields( $column_name, $post_type ) {
         <?php
          switch ( $column_name ) {
            case 'pnumber':
-               ?><span class="title">Property Number</span><input name="property_number" /><?php
+               ?><span class="title">Property Number</span><input type="text" name="property_number" /><?php
                break;
          }
         ?>
@@ -63,6 +63,17 @@ function lsr_quick_edit_propertynumber ($post_id) {
 }
 ///
 
+add_action( 'admin_enqueue_scripts', 'lsr_enqueue_quick_edit_population' );
+function lsr_enqueue_quick_edit_population( $pagehook ) {
+
+	// do nothing if we are not on the target pages
+	if ( 'edit.php' != $pagehook ) {
+		return;
+	}
+
+	wp_enqueue_script( 'populatequickedit', get_stylesheet_directory_uri() . '/custom/populate.js', array( 'jquery' ) );
+
+}
 
 
 
