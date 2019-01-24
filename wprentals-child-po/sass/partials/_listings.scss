@@ -7,8 +7,12 @@
   display: none;
 }
 // archive - boxed used for search listing, archive & similar listings
+
 .listing_wrapper {
   .property_listing  {
+    .listing-unit-img-wrapper {
+    }
+
     .title-container {
       .price_unit_wrapper {
         top: 0px;
@@ -16,6 +20,7 @@
           font-size: 1.1em;
         }
       }
+
       .category_name {
         a {
           padding-right: 0px;
@@ -36,7 +41,23 @@
     }
   }
 }
-
+// half map archive
+@media only screen and (min-width: 668px) {
+  #google_map_prop_list_sidebar {
+    .ajax-map {
+      .property_listing  {
+        .listing-unit-img-wrapper {
+          img {
+            max-width: 270px;
+          }
+        }
+        .category_tagline_wrapper {
+          position: relative; // JIC
+        }
+      }
+    }
+  }
+}
 // ** single listing
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none;

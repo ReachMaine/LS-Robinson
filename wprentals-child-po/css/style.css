@@ -430,6 +430,11 @@ blockquote {
   padding-right: 0px;
   margin-right: 0px; }
 
+@media only screen and (min-width: 668px) {
+  #google_map_prop_list_sidebar .ajax-map .property_listing .listing-unit-img-wrapper img {
+    max-width: 270px; }
+  #google_map_prop_list_sidebar .ajax-map .property_listing .category_tagline_wrapper {
+    position: relative; } }
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none; }
 

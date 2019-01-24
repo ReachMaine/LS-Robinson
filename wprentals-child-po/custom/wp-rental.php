@@ -1,133 +1,69 @@
-<?php /* over-write functions for wp_rentals
-functions:
-    wpestate_show_price
-    wpestate_show_price_booking
-    wpestate_show_extended_search
-*/
+<?php /*  custom mods for wp-rental theme */
 
-if( !function_exists('wpestate_show_price') ):
-function wpestate_show_price($post_id,$currency,$where_currency,$return=0){
+/*  add listing number to the post  */
 
-    $price_label    =   '<span class="price_label">'.esc_html ( get_post_meta($post_id, 'property_label', true) ).'</span>';
-    $property_price_before_label    =   esc_html ( get_post_meta($post_id, 'property_price_before_label', true) );
-    $property_price_after_label     =   esc_html ( get_post_meta($post_id, 'property_price_after_label', true) );
-
-    $price_label    =   '';
-    $price_per_guest_from_one       =   floatval( get_post_meta($post_id, 'price_per_guest_from_one', true) );
-
-    if($price_per_guest_from_one==1){
-        $price          =   floatval( get_post_meta($post_id, 'extra_price_per_guest', true) );
-    }else{
-        $price          =   floatval( get_post_meta($post_id, 'property_price', true) );
-    }
-
-    $th_separator   =   get_option('wp_estate_prices_th_separator','');
-    $custom_fields  =   get_option( 'wp_estate_multi_curr', true);
-
-
-
-    if( !empty($custom_fields) && isset($_COOKIE['my_custom_curr']) &&  isset($_COOKIE['my_custom_curr_pos']) &&  isset($_COOKIE['my_custom_curr_symbol']) && $_COOKIE['my_custom_curr_pos']!=-1){
-        $i              =   floatval($_COOKIE['my_custom_curr_pos']);
-        $custom_fields  =   get_option( 'wp_estate_multi_curr', true);
-        if ($price != 0) {
-            $price      = $price * $custom_fields[$i][2];
-            // $price      = westate_display_corection($price);
-            $price      = number_format($price,2,'.',$th_separator);
-            $price      = TrimTrailingZeroes($price);
-
-
-            $currency   = $custom_fields[$i][1];
-
-            if ($custom_fields[$i][3] == 'before') {
-                $price = $currency . ' ' . $price;
-            } else {
-                $price = $price . ' ' . $currency;
-            }
-
-        }else{
-            $price='';
-        }
-    }else{
-        if ($price != 0) {
-            //$price      = westate_display_corection($price);
-            $price      = number_format($price,2,'.',$th_separator);
-            $price      = TrimTrailingZeroes($price);
-            if ($where_currency == 'before') {
-                $price = $currency . $price; // zig took out space between currency & price
-            } else {
-                $price = $price . ' ' . $currency;
-            }
-
-        }else{
-            $price='';
-        }
-    }
-
-
-
-    if($return==0){
-        print  $property_price_before_label.' '.$price.' '.$price_label.$property_price_after_label;
-    }else{
-        return  $property_price_before_label.' '.$price.' '.$price_label.$property_price_after_label;
-    }
+add_filter( 'manage_edit-estate_property_columns', 'lsr_add_property_number_column');
+/**
+ * Add columns to management page
+ *
+ * @param array $columns
+ *
+ * @return array
+ */
+function lsr_add_property_number_column( $columns ) {
+  $columns['pnumber'] = __('Property Number');
+  return $columns;
 }
-endif; // function wpestate_show_price exists
 
-/**********************/
-if( !function_exists('wpestate_show_price_booking') ):
-function wpestate_show_price_booking($price,$currency,$where_currency,$return=0){
-    $price_label='';
-    $th_separator   =get_option('wp_estate_prices_th_separator','');
-    $custom_fields = get_option( 'wp_estate_multi_curr', true);
+// show the property_number in the new column
+add_action( 'manage_posts_custom_column' , 'lsr_property_number_columns', 10, 2 );
+function lsr_property_number_columns ($column, $post_id) {
+  switch ( $column ) {
+		case 'pnumber':
+			$prop_number = get_post_meta( $post_id, 'property-number', true );
+			 if (!empty($prop_number) ){ echo $prop_number; }
 
-    if( !empty($custom_fields) && isset($_COOKIE['my_custom_curr']) &&  isset($_COOKIE['my_custom_curr_pos']) &&  isset($_COOKIE['my_custom_curr_symbol']) && $_COOKIE['my_custom_curr_pos']!=-1){
-        $i=intval($_COOKIE['my_custom_curr_pos']);
-        $custom_fields = get_option( 'wp_estate_multi_curr', true);
-        if ($price != 0) {
-            $price      = $price * $custom_fields[$i][2];
-            //$price      = westate_display_corection($price);
-            $price      = number_format($price,2,'.',$th_separator);
-            $price      = TrimTrailingZeroes($price);
-            $currency   = $custom_fields[$i][1];
+			break;
 
-            if ($custom_fields[$i][3] == 'before') {
-                $price = $currency .  $price; // zig
-            } else {
-                $price = $price . ' ' . $currency;
-            }
-
-        }else{
-            $price='';
-        }
-    }else{
-        if ($price != 0) {
-            //$price      = westate_display_corection($price);
-            $price      = ( number_format($price,2,'.',$th_separator) );
-            $price      = TrimTrailingZeroes($price);
-
-            if ($where_currency == 'before') {
-                $price = $currency .  $price; // zig
-            } else {
-                $price = $price . ' ' . $currency;
-            }
-
-        }else{
-            $price='';
-        }
-    }
-
-
-    if($return==0){
-        print  $price.' '.$price_label;
-    }else{
-         return $price.' '.$price_label;
-    }
+	}
 }
-endif; //wpestate_show_price_booking
-
-function my_theme_scripts() {
-    wp_enqueue_script( 'my-great-script', get_template_directory_uri() . '/custom/custom.js', array( 'jquery' ), '1.0.0', true );
+// now add the field to the quick edit
+function lsr_quickedit_fields( $column_name, $post_type ) {
+    ?>
+    <fieldset class="inline-edit-col-right inline-edit-book">
+      <div class="inline-edit-col column-<?php echo $column_name; ?>">
+        <label class="inline-edit-group">
+        <?php
+         switch ( $column_name ) {
+           case 'pnumber':
+               ?><span class="title">Property Number</span><input name="property_number" /><?php
+               break;
+         }
+        ?>
+        </label>
+      </div>
+    </fieldset>
+    <?php
 }
-//add_action( 'wp_enqueue_scripts', 'my_theme_scripts', 11 );
+add_action( 'quick_edit_custom_box', 'lsr_quickedit_fields', 10, 2 );
+
+// save to DB when fill it in.
+add_action( 'save_post', 'lsr_quick_edit_propertynumber' );
+function lsr_quick_edit_propertynumber ($post_id) {
+  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+       return $post_id;
+   }
+
+   if ( ! current_user_can( 'edit_post', $post_id ) || 'estate_property' != $_POST['post_type'] ) {
+       return $post_id;
+   }
+   $data = $_POST['property_number'];
+   update_post_meta( $post_id, 'property-number', $data );
+
+}
+///
+
+
+
 
 /* **************** */
