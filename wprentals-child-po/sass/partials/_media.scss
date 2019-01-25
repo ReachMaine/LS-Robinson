@@ -141,7 +141,7 @@
 @media only screen and (max-width: 1180px) { // flips over mobile menu here.
 	.top_bar_on .full_map_container {
 		#google_map_prop_list_wrapper, #google_map_prop_list_sidebar {
-			top: 110px;
+			top: 0px;
 		}
 	}
 }
@@ -152,7 +152,7 @@
 	}
 	.top_bar_on .full_map_container {
 	  #google_map_prop_list_wrapper, #google_map_prop_list_sidebar {
-	    top: 190px;
+	    top: 160px;
 	  }
 	}
 }

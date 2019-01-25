@@ -24,6 +24,10 @@ Text Domain:  wpestate-child
     color:$lsr-dkrlight-grey;
   }
 }
+.property_menu_wrapper_hidden {
+  display: none!important; // scroll javacscript may overwrite this
+  opacity: 0; // hide it.
+}
 // two types of headers -
 //          transparent_header (most of the pages & the homes)
 //           and non-transparent (the properties & properties archive)
@@ -41,6 +45,9 @@ Text Domain:  wpestate-child
 .logo img {
   max-height: 100px //increase logo size
 }
+.navbar-fixed-top .logo img {
+  //max-height: 55px;
+}
 .mobile-logo img {
   max-height: auto;
 }
@@ -55,7 +62,7 @@ Text Domain:  wpestate-child
 }
 //mobile menu
 .mobile-logo img {
-  margin-top: 5px;
+  //margin-top: 5px;
 }
 
 .mobile_header, .snap-drawer, .user_mobile_menu_list, .mobilex-menu { //Setting background color for mobile menu and flyout
@@ -114,9 +121,6 @@ Text Domain:  wpestate-child
   margin-right: 0;
 }
 
-.navbar-fixed-top .logo img {
-  max-height: 55px;
-}
 
 .home .content_wrapper.row {
   display: none;
@@ -173,7 +177,13 @@ Text Domain:  wpestate-child
   }
 }
 // footer
-
+#colophon .xoxo {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    .widget-container:last-child {
+      margin-bottom: 10px;
+    }
+}
 
 //Misc
 .backtop {

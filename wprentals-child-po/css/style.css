@@ -438,8 +438,6 @@ blockquote {
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none; }
 
-.content_wrapper.listing_wrapper .category_wrapper .category_details_wrapper a[rel="tag"] {
-  margin-right: 0px; }
 .content_wrapper.listing_wrapper #view_more_desc {
   display: block; }
 .content_wrapper.listing_wrapper .listing_detail.list_detail_prop_area,
@@ -477,6 +475,10 @@ form.wpcf7-form input, form.wpcf7-form textarea {
 .top_bar .social_sidebar_internal a:hover i {
   color: #c5c5c5; }
 
+.property_menu_wrapper_hidden {
+  display: none !important;
+  opacity: 0; }
+
 .header_wrapper.top_bar_on:not(.transparent_header) {
   height: 120px; }
   .header_wrapper.top_bar_on:not(.transparent_header) #access {
@@ -496,9 +498,6 @@ form.wpcf7-form input, form.wpcf7-form textarea {
 
 .header_media:empty {
   border-bottom: 4px solid #3b53a4; }
-
-.mobile-logo img {
-  margin-top: 5px; }
 
 .mobile_header, .snap-drawer, .user_mobile_menu_list, .mobilex-menu {
   background-color: #e6e6e6; }
@@ -543,9 +542,6 @@ form.wpcf7-form input, form.wpcf7-form textarea {
   margin-left: 0;
   margin-right: 0; }
 
-.navbar-fixed-top .logo img {
-  max-height: 55px; }
-
 .home .content_wrapper.row {
   display: none; }
 
@@ -583,6 +579,12 @@ form.wpcf7-form input, form.wpcf7-form textarea {
     #reach-bottom-cta #reach-bottom-cta-wrap .texwidget a {
       color: white;
       padding: 18px 25px; }
+
+#colophon .xoxo {
+  padding-top: 30px;
+  padding-bottom: 15px; }
+  #colophon .xoxo .widget-container:last-child {
+    margin-bottom: 10px; }
 
 .backtop {
   background-color: #3b53a4;
@@ -663,10 +665,10 @@ form.wpcf7-form input, form.wpcf7-form textarea {
       display: none; } }
 @media only screen and (max-width: 1180px) {
   .top_bar_on .full_map_container #google_map_prop_list_wrapper, .top_bar_on .full_map_container #google_map_prop_list_sidebar {
-    top: 110px; } }
+    top: 0px; } }
 @media only screen and (min-width: 1181px) {
   .master_header.master_transparent_header + .header_media {
     min-height: 150px; }
 
   .top_bar_on .full_map_container #google_map_prop_list_wrapper, .top_bar_on .full_map_container #google_map_prop_list_sidebar {
-    top: 190px; } }
+    top: 160px; } }
