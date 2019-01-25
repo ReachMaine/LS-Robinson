@@ -75,6 +75,19 @@ function lsr_enqueue_quick_edit_population( $pagehook ) {
 
 }
 
+//make new column sortable.
+// bailed 'cause if no value in meta, wont be in list.
+//add_action( 'pre_get_posts', 'lsr_propert_number_orderby' );
+function lsr_propert_number_orderby( $query ) {
+    if( ! is_admin() )
+        return;
 
+    $orderby = $query->get( 'orderby');
+
+    if( 'property-number' == $orderby ) {
+        $query->set('meta_key','property-number');
+        $query->set('orderby','meta_value_num');
+    }
+}
 
 /* **************** */
