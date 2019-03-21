@@ -9,6 +9,11 @@
 // archive - boxed used for search listing, archive & similar listings
 
 .listing_wrapper {
+  .single-content.listing-content {
+    .property_page_container  {
+      display: none; // hide padding, etc for booking calendar box -  not showing
+    }
+  }
   .property_listing  {
     .listing-unit-img-wrapper {
     }
@@ -27,6 +32,11 @@
           margin-right: 0px;
         }
       }
+    }
+  }
+  .listingsidebar2.listing_type_1 {
+    #listing_owner {
+      display: none; // hide box around listing owner (which isnt displayed anyway)
     }
   }
 

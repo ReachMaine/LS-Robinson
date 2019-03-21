@@ -422,6 +422,8 @@ blockquote {
 .property_status.status_verified {
   display: none; }
 
+.listing_wrapper .single-content.listing-content .property_page_container {
+  display: none; }
 .listing_wrapper .property_listing .title-container .price_unit_wrapper {
   top: 0px; }
   .listing_wrapper .property_listing .title-container .price_unit_wrapper .price_unit {
@@ -429,6 +431,8 @@ blockquote {
 .listing_wrapper .property_listing .title-container .category_name a {
   padding-right: 0px;
   margin-right: 0px; }
+.listing_wrapper .listingsidebar2.listing_type_1 #listing_owner {
+  display: none; }
 
 @media only screen and (min-width: 668px) {
   #google_map_prop_list_sidebar .ajax-map .property_listing .listing-unit-img-wrapper img {
