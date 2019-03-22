@@ -155,7 +155,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
         ?>
 
         </div>
-        <div id="view_more_desc"><?php esc_html_e('View more','wprentals');?></div>
+        <!-- div id="view_more_desc"><?php esc_html_e('View more','wprentals');?></div-->
 
 
         <!-- property price   -->
@@ -341,7 +341,7 @@ $guest_list= wpestate_get_guest_dropdown('noany');
                     if( wprentals_get_option('wp_estate_kind_of_map')==1){ ?>
 
                         <div id="gmapstreet"></div>
-                        <?php echo wpestate_show_poi_onmap();
+                        <?php /* zig xout  echo wpestate_show_poi_onmap(); */
                     }
                     ?>
 

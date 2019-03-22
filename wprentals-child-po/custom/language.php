@@ -13,7 +13,7 @@
 									}
 
 								break;/* end our-team*/
-						case 'wpestate':
+						case 'wprentals':
 						switch ( $translated_text ) {
 								case 'Price per night' :
 									$translated_text = 'Price';

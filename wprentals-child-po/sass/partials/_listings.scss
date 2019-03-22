@@ -83,6 +83,7 @@
   #listing_description .panel-body {
     //max-height: 100%!important; // over-write the show less
     //overflow: initial!important;
+    max-height: inherit;
   }
   #view_more_desc {
     display: block;

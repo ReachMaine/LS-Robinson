@@ -442,6 +442,8 @@ blockquote {
 .property_sidebar_container #google_map_on_list .info_details .prop_pricex {
   display: none; }
 
+.content_wrapper.listing_wrapper #listing_description .panel-body {
+  max-height: inherit; }
 .content_wrapper.listing_wrapper #view_more_desc {
   display: block; }
 .content_wrapper.listing_wrapper .listing_detail.list_detail_prop_area,
